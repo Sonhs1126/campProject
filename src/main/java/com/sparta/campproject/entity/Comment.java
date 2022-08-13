@@ -21,7 +21,6 @@ public class Comment extends Timestamped {
 
     @Column(nullable = false)
     private String content;
-
     @Column(nullable = false)
     private String nickname;
 

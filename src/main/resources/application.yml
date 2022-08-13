@@ -1,40 +1,40 @@
-spring:
-
-  h2:
-    console:
-      enabled: true
-
-  datasource:
-    url: jdbc:h2:mem:testdb
-    driver-class-name: org.h2.Driver
-    username: sa
-    password:
-
-  jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
-    hibernate:
-      ddl-auto: create-drop
-    properties:
-      hibernate:
-        format_sql: true
-        show_sql: true
-
-  #        ????????
-
-  profiles:
-    include:
-      - aws
-      - credentials
-
-  servlet:
-    multipart:
-      enabled: true
-      max-file-size: 20MB
-      max-request-size: 20MB
-
-logging:
-  level:
-    com.tutorial: debug
+#spring:
+#
+#  h2:
+#    console:
+#      enabled: true
+#
+#  datasource:
+#    url: jdbc:h2:mem:testdb
+#    driver-class-name: org.h2.Driver
+#    username: sa
+#    password:
+#
+#  jpa:
+#    database-platform: org.hibernate.dialect.H2Dialect
+#    hibernate:
+#      ddl-auto: create-drop
+#    properties:
+#      hibernate:
+#        format_sql: true
+#        show_sql: true
+#
+#  #        ????????
+#
+#  profiles:
+#    include:
+#      - aws
+#      - credentials
+#
+#  servlet:
+#    multipart:
+#      enabled: true
+#      max-file-size: 20MB
+#      max-request-size: 20MB
+#
+#logging:
+#  level:
+#    com.tutorial: debug
 
 # HS512 ????? ??? ??? ??? 512bit, ? 64byte ??? secret key? ???? ??.
 # Secret ?? ?? ???? Base64 ? ???? ? ?? (?? ???? ???? ??? ??? ??)
@@ -46,15 +46,12 @@ jwt:
 cloud:
   aws:
     s3:
-      bucket:
+      bucket: sonhs-bucket
     region:
-      static:
+      static: ap-northeast-2
     credentials:
       #            accessKey: 1234
       #            secretKey: 1234
 
-      accessKey:
-      secretKey:
-
-    stack:
-      auto =false:
+      access-Key: AKIA6GILXDF7VFBRFSVD
+      secret-Key: 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
